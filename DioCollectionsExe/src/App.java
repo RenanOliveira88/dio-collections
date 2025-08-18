@@ -1,13 +1,15 @@
 
 import br.edu.dio.exercicios.list.CarrinhoDeCompras;
 import br.edu.dio.exercicios.list.Item;
+import br.edu.dio.exercicios.list.OrdenacaoNumeros;
 import br.edu.dio.exercicios.list.SomaNumeros;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
-        //chamarCarrinhoDeComprar();
+        chamarCarrinhoDeComprar();
         chamarSomaNumeros();
+        chamarOrdenacaoNumeros();
 
         
 
@@ -42,5 +44,15 @@ public class App {
         somaNumeros.encontrarMenorNumero();
 
         somaNumeros.exibirNumero();
+    }
+    private static void chamarOrdenacaoNumeros(){
+        OrdenacaoNumeros ordenacaoNumeros = new OrdenacaoNumeros();
+
+        ordenacaoNumeros.adicionarNumero(4);
+        ordenacaoNumeros.adicionarNumero(1);
+        ordenacaoNumeros.adicionarNumero(3);
+
+        ordenacaoNumeros.ordenarAscendente();
+        ordenacaoNumeros.ordenarDescendente();
     }
 }
