@@ -1,4 +1,6 @@
+import br.edu.dio.exercicios.set.Aluno;
 import br.edu.dio.exercicios.set.ConjuntoPalavrasUnicas;
+import br.edu.dio.exercicios.set.GerenciadorAlunos;
 import br.edu.dio.exercicios.set.ListaTarefas;
 
 public class AppSet {
@@ -6,7 +8,9 @@ public class AppSet {
         
         //testarConjuntoPalavrasUnicas();
 
-        testarListaTarefas();
+        //testarListaTarefas();
+
+        testarGerenciadorAlunos();
 
 
     }
@@ -51,4 +55,24 @@ public class AppSet {
         lista.limparListaTarefas();
         lista.contarTarefas();
     }
+    private static void testarGerenciadorAlunos(){
+        
+        Aluno a1 = new Aluno("Pedro", 123, 85); 
+        Aluno a2 = new Aluno("Ana", 124, 90);
+        Aluno a3 = new Aluno("João", 125, 78);
+
+        GerenciadorAlunos gerenciador = new GerenciadorAlunos();
+        gerenciador.adicionarAlunos(a1);
+        gerenciador.adicionarAlunos(a2);
+        gerenciador.adicionarAlunos(a3);
+
+        gerenciador.exibirAlunosPorNome();
+        
+        gerenciador.exibirAlunosPorNota();
+        
+        gerenciador.removerAluno(124L);
+        
+        gerenciador.exibirAlunos();
+
+    }  
 }
