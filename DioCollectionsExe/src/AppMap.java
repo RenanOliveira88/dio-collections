@@ -1,11 +1,13 @@
 
 import br.edu.dio.exercicios.map.ContagemPalavras;
 import br.edu.dio.exercicios.map.Dicionario;
+import br.edu.dio.exercicios.map.LivrariaOnline;
 
 public class AppMap {
     public static void main(String[] args) {
         //testarOperacoesBasicas();
-        testarPesquisa();
+       // testarPesquisa();
+       testarOrdenacao();
     }
 
     public static void testarOperacoesBasicas(){
@@ -27,5 +29,13 @@ public class AppMap {
         contagemPalavras.exibirContagem();
         contagemPalavras.encontrarPalavraMaisFrequente();
 
+    }
+
+    public static void testarOrdenacao(){
+        LivrariaOnline livraria = new LivrariaOnline();
+        livraria.adicionarLivro("link1", "Java Basics", "Author A", 29.99);
+        livraria.adicionarLivro("link2", "Advanced Java", "Author B", 39.99);
+        livraria.adicionarLivro("link3", "Python for Beginners", "Author C", 25.99);
+        livraria.exibirLivrosOrdenadosPorPreco();
     }
 }
