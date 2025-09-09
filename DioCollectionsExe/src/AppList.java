@@ -4,7 +4,7 @@ import br.edu.dio.exercicios.list.Item;
 import br.edu.dio.exercicios.list.OrdenacaoNumeros;
 import br.edu.dio.exercicios.list.SomaNumeros;
 
-public class App {
+public class AppList {
     public static void main(String[] args) throws Exception {
 
         chamarCarrinhoDeComprar();
